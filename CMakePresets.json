@@ -46,6 +46,29 @@
       }
     },
     {
+      "name": "windowsRelease",
+      "displayName": "WindowsRelease",
+      "description": "Visual Studio project for Windows",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/_build",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "D:/Qt/",
+        "QLEMENTINE_SANDBOX": true,
+        "QLEMENTINE_SHOWCASE": true,
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_INTERPROCEDURAL_OPTIMIZATION": true,
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
+        "CMAKE_C_COMPILER": "clang-cl",
+        "CMAKE_CXX_COMPILER": "clang-cl",
+        "CMAKE_BUILD_PARALLEL_LEVEL": "8"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
       "name": "linux",
       "displayName": "Linux",
       "description": "Makefile for Linux",
@@ -204,7 +227,7 @@
   ],
   "vendor": {
     "qt-project.org/Presets": {
-      "checksum": "JSngpQhkl8SxivBQHGnT+zT95Xg="
+      "checksum": "TiF0TNZ2AmRnqcGWQBL5jT1Xqio="
     }
   }
 }
