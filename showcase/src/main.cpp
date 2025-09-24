@@ -13,6 +13,10 @@
 #define USE_CUSTOM_STYLE 1
 
 int main(int argc, char* argv[]) {
+  // Enable subpixels
+  if(!qEnvironmentVariableIsSet("QT_SUBPIXEL_AA_TYPE"))
+    qputenv("QT_SUBPIXEL_AA_TYPE", "RGB");
+
   // Must be set before creating a QApplication.
   QApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
 
@@ -20,6 +24,12 @@ int main(int argc, char* argv[]) {
 
   // Add font fallback for Chinese
   QFontDatabase::addApplicationFallbackFontFamily(QChar::Script_Han, "Microsoft YaHei UI");
+  {
+    QFont theFont("Microsoft YaHei UI");
+    theFont.setHintingPreference(QFont::PreferNoHinting);
+    theFont.setStyleStrategy(QFont::StyleStrategy(QFont::PreferAntialias | QFont::PreferQuality));
+    QApplication::setFont(theFont);
+  }
 
   // Must be set after creating a QApplication.
   QGuiApplication::setApplicationDisplayName("Showcase");
