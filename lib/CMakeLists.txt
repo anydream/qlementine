@@ -139,12 +139,6 @@ set_target_properties(${PROJECT_NAME}
     CMAKE_AUTOUIC ON
 )
 
-target_compile_options(${PROJECT_NAME}
-  PRIVATE
-    $<$<CXX_COMPILER_ID:MSVC>:/MP /WX /W4>
-    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Werror>
-)
-
 # Create source groups.
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}
   FILES

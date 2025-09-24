@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 #include <QApplication>
+#include <QFontDatabase>
 
 #include <oclero/qlementine/style/QlementineStyle.hpp>
 #include <oclero/qlementine/style/ThemeManager.hpp>
@@ -16,6 +17,9 @@ int main(int argc, char* argv[]) {
   QApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
 
   QApplication qApplication(argc, argv);
+
+  // Add font fallback for Chinese
+  QFontDatabase::addApplicationFallbackFontFamily(QChar::Script_Han, "Microsoft YaHei UI");
 
   // Must be set after creating a QApplication.
   QGuiApplication::setApplicationDisplayName("Showcase");

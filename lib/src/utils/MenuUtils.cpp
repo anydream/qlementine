@@ -68,6 +68,7 @@ QMenu* getTopLevelMenu(QMenu* menu) {
 }
 
 void flashAction(QAction* action, QMenu* menu, const std::function<void()>& onAnimationFinished) {
-  new FlashActionHelper(action, menu, onAnimationFinished);
+  //new FlashActionHelper(action, menu, onAnimationFinished);
+  return onAnimationFinished();
 }
 } // namespace oclero::qlementine

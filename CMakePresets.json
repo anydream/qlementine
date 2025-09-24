@@ -28,12 +28,16 @@
       "name": "windows",
       "displayName": "Windows",
       "description": "Visual Studio project for Windows",
-      "generator": "Visual Studio 17 2022",
+      "generator": "Ninja",
       "binaryDir": "${sourceDir}/_build",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "C:/Qt/6.8.2/msvc2022_64",
+        "CMAKE_PREFIX_PATH": "D:/Qt/",
         "QLEMENTINE_SANDBOX": true,
-        "QLEMENTINE_SHOWCASE": true
+        "QLEMENTINE_SHOWCASE": true,
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_C_COMPILER": "clang-cl",
+        "CMAKE_CXX_COMPILER": "clang-cl",
+        "CMAKE_BUILD_PARALLEL_LEVEL": "8"
       },
       "condition": {
         "type": "equals",
@@ -56,6 +60,18 @@
         "lhs": "${hostSystemName}",
         "rhs": "Linux"
       }
+    },
+    {
+      "hidden": true,
+      "name": "Qt",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "$env{QTDIR}"
+      },
+      "vendor": {
+        "qt-project.org/Qt": {
+          "checksum": "wVa86FgEkvdCTVp1/nxvrkaemJc="
+        }
+      }
     }
   ],
   "buildPresets": [
@@ -64,7 +80,9 @@
       "displayName": "macOS",
       "configurePreset": "macos",
       "description": "Build with Ninja for macOS",
-      "targets": ["qlementine"],
+      "targets": [
+        "qlementine"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -76,7 +94,9 @@
       "displayName": "Sandbox for macOS",
       "configurePreset": "macos",
       "description": "Sandbox - Build with Ninja for macOS",
-      "targets": ["sandbox"],
+      "targets": [
+        "sandbox"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -88,7 +108,9 @@
       "displayName": "Showcase for macOS",
       "configurePreset": "macos",
       "description": "Showcase - Build with Ninja for macOS",
-      "targets": ["showcase"],
+      "targets": [
+        "showcase"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -100,7 +122,9 @@
       "displayName": "Windows",
       "configurePreset": "windows",
       "description": "Build with Visual Studio for Windows",
-      "targets": ["qlementine"],
+      "targets": [
+        "qlementine"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -112,7 +136,9 @@
       "displayName": "Sandbox for Windows",
       "configurePreset": "windows",
       "description": "Sandbox - Build with Visual Studio for Windows",
-      "targets": ["sandbox"],
+      "targets": [
+        "sandbox"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -124,7 +150,9 @@
       "displayName": "Showcase for Windows",
       "configurePreset": "windows",
       "description": "Showcase - Build with Visual Studio for Windows",
-      "targets": ["showcase"],
+      "targets": [
+        "showcase"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -136,7 +164,9 @@
       "displayName": "Linux",
       "configurePreset": "linux",
       "description": "Build for Linux",
-      "targets": ["qlementine"],
+      "targets": [
+        "qlementine"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -148,7 +178,9 @@
       "displayName": "Sandbox for Linux",
       "configurePreset": "linux",
       "description": "Sandbox - Build for Linux",
-      "targets": ["sandbox"],
+      "targets": [
+        "sandbox"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -160,12 +192,19 @@
       "displayName": "Showcase for Linux",
       "configurePreset": "linux",
       "description": "Showcase - Build for Linux",
-      "targets": ["showcase"],
+      "targets": [
+        "showcase"
+      ],
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
         "rhs": "Linux"
       }
     }
-  ]
+  ],
+  "vendor": {
+    "qt-project.org/Presets": {
+      "checksum": "JSngpQhkl8SxivBQHGnT+zT95Xg="
+    }
+  }
 }

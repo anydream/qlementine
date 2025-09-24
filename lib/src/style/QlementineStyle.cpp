@@ -4458,7 +4458,7 @@ int QlementineStyle::styleHint(StyleHint sh, const QStyleOption* opt, const QWid
     case SH_Menu_Mask:
       break;
     case SH_Menu_FlashTriggeredItem:
-      return true;
+      return false;
     case SH_Menu_FadeOutOnHide:
       return true;
     case SH_Menu_SupportsSections:
