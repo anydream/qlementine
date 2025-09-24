@@ -99,7 +99,7 @@ set(HEADERS
 
 set(RESOURCES
   resources/qlementine.qrc
-  resources/qlementine_font_inter.qrc
+  resources/qlementine_font_ubuntu.qrc
   resources/qlementine_font_roboto.qrc
 )
 

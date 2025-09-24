@@ -208,12 +208,19 @@ std::optional<Theme> Theme::fromJsonDoc(const QJsonDocument& jsonDoc) {
 
 void Theme::initializeFonts() {
   // Fonts.
-  const auto defaultFont =
-    useSystemFonts ? QFontDatabase::systemFont(QFontDatabase::GeneralFont) : QFont(QStringLiteral("Inter"));
-  const auto fixedFont =
+  auto defaultFont =
+    useSystemFonts ? QFontDatabase::systemFont(QFontDatabase::GeneralFont) : QFont(QStringLiteral("Ubuntu"));
+  auto fixedFont =
     useSystemFonts ? QFontDatabase::systemFont(QFontDatabase::FixedFont) : QFont(QStringLiteral("Roboto Mono"));
-  const auto titleFont =
-    useSystemFonts ? QFontDatabase::systemFont(QFontDatabase::TitleFont) : QFont(QStringLiteral("Inter Display"));
+  auto titleFont =
+    useSystemFonts ? QFontDatabase::systemFont(QFontDatabase::TitleFont) : QFont(QStringLiteral("Ubuntu"));
+
+  defaultFont.setHintingPreference(QFont::PreferNoHinting);
+  defaultFont.setStyleStrategy(QFont::StyleStrategy(QFont::PreferAntialias | QFont::PreferQuality));
+  fixedFont.setHintingPreference(QFont::PreferNoHinting);
+  fixedFont.setStyleStrategy(QFont::StyleStrategy(QFont::PreferAntialias | QFont::PreferQuality));
+  titleFont.setHintingPreference(QFont::PreferNoHinting);
+  titleFont.setStyleStrategy(QFont::StyleStrategy(QFont::PreferAntialias | QFont::PreferQuality));
 
   const auto dpi = QGuiApplication::primaryScreen()->logicalDotsPerInch();
 

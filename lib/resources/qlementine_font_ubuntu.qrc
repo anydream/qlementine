@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qlementine/resources">
+    <file>fonts/ubuntu/Ubuntu-B.ttf</file>
+    <file>fonts/ubuntu/Ubuntu-L.ttf</file>
+    <file>fonts/ubuntu/Ubuntu-R.ttf</file>
+  </qresource>
+</RCC>

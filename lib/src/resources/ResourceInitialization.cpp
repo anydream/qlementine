@@ -9,7 +9,7 @@
 void qlementineResourceInitialization() {
   // Loads the QRC content.
   Q_INIT_RESOURCE(qlementine);
-  Q_INIT_RESOURCE(qlementine_font_inter);
+  Q_INIT_RESOURCE(qlementine_font_ubuntu);
   Q_INIT_RESOURCE(qlementine_font_roboto);
 }
 

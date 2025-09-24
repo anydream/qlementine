@@ -144,7 +144,7 @@ public: // Values.
 
   bool useSystemFonts{ false };
 
-  int fontSize{ 12 };
+  int fontSize{ 13 };
   int fontSizeMonospace{ 13 };
   int fontSizeH1{ 34 };
   int fontSizeH2{ 26 };
