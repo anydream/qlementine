@@ -4311,7 +4311,7 @@ int QlementineStyle::pixelMetric(PixelMetric m, const QStyleOption* opt, const Q
 
     // Common.
     case PM_TextCursorWidth:
-      return 0;
+      return 1;
 
     // ScrollView.
     case PM_ScrollBarExtent:
