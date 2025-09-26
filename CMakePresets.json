@@ -144,6 +144,7 @@
       "name": "windows",
       "displayName": "Windows",
       "configurePreset": "windows",
+      "jobs": 8,
       "description": "Build with Visual Studio for Windows",
       "targets": [
         "qlementine"
@@ -227,7 +228,7 @@
   ],
   "vendor": {
     "qt-project.org/Presets": {
-      "checksum": "O7RmT50ht8mXh41Un+kbDu79BaE="
+      "checksum": "syBuJe8zo1d7Yiq23ioHGktUo2k="
     }
   }
 }
