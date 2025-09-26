@@ -57,7 +57,7 @@
         "QLEMENTINE_SHOWCASE": true,
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_INTERPROCEDURAL_OPTIMIZATION": true,
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
+        "#CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
         "CMAKE_C_COMPILER": "clang-cl",
         "CMAKE_CXX_COMPILER": "clang-cl",
         "CMAKE_BUILD_PARALLEL_LEVEL": "8"
@@ -227,7 +227,7 @@
   ],
   "vendor": {
     "qt-project.org/Presets": {
-      "checksum": "TiF0TNZ2AmRnqcGWQBL5jT1Xqio="
+      "checksum": "O7RmT50ht8mXh41Un+kbDu79BaE="
     }
   }
 }
