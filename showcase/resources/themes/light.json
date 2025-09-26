@@ -21,8 +21,8 @@
   "focusColor": "#40a9ff66",
 
   "neutralColor": "#d1d1d1",
-  "neutralColorHovered": "#d3d3d3",
-  "neutralColorPressed": "#d5d5d5",
+  "neutralColorHovered": "#dddddd",
+  "neutralColorPressed": "#c0c0c0",
   "neutralColorDisabled": "#eeeeee",
 
   "primaryColor": "#1890ff",
