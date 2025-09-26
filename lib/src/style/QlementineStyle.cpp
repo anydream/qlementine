@@ -5162,7 +5162,7 @@ QColor const& QlementineStyle::toolButtonBackgroundColor(MouseState const mouse,
 
   switch (mouse) {
     case MouseState::Pressed:
-      return primary ? _impl->theme.primaryColorPressed : _impl->theme.neutralColorHovered;
+      return primary ? _impl->theme.primaryColorPressed : _impl->theme.neutralColorPressed;
     case MouseState::Hovered:
       return primary ? _impl->theme.primaryColorHovered : _impl->theme.neutralColor;
     case MouseState::Disabled:
